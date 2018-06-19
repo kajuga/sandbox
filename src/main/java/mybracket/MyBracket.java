@@ -5,14 +5,14 @@ public class MyBracket {
 
 
 
-    private char symbol;
+    private String symbol;
 
     //объявил поля экземпляра
     private int begin;
     private int end;
 
     //конструктор-инициализатор.
-    public MyBracket(char symbol, int begin) {
+    public MyBracket(String symbol, int begin) {
         this.symbol = symbol;
         this.begin = begin;
     }
@@ -29,7 +29,7 @@ public class MyBracket {
         return end;
     }
 
-    public char getSymbol() {
+    public String getSymbol() {
         return symbol;
     }
 }
