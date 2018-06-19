@@ -23,8 +23,11 @@ public class Expression {
 
         char[] symbols = line.toCharArray();
         for (int i = 0; i < symbols.length && result.isValid(); i++) {
+            //Получение всех элементов перечисления  - enum.values() :
             for (Bracket bracket : Bracket.values()) {
+
                 if (symbols[i] == bracket.getBeginBracket()) {
+                    //заолняем стак итемами (тип скобки, нач. позиция, конечн. позиция - по конструктору Item)
                     stack.push(new Item(bracket, i, -1));
                     break;
                 } else if (symbols[i] == bracket.getEndBracket()) {

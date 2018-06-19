@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         //String line = "a[b({c}d)e]";
-        String line = "a[b({c}d)e](fff)";
+        String line = "a[b({c}d)e](fff)[[]]";
         Info result = Expression.parseBracket(line);
         System.out.println(line);
         System.out.println("valid = " + result.isValid());
