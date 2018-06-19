@@ -15,8 +15,8 @@ public class MySortBrackets {
 
     public static void main(String[] args) {
         //моя строка
-        String str = new String("{()s(][fd[ss[dd]da]aa])d}k");
-        System.out.println(str);
+        String str = new String("()s([fd[ss[dd]da]aa])d{k}");
+        System.out.println("The string is: " + str);
         MySortBrackets mySortBrackets = new MySortBrackets();
         try {
             List <MyBracket> brackets = mySortBrackets.myParserBrackets(str);
@@ -53,11 +53,10 @@ public class MySortBrackets {
                 }
             }
             //если символ '(' - то пушится в стек
-            if (symbols[i] == '('){
+            if (symbols[i] == '(') {
                 MyBracket myBracket = new MyBracket(ROUND_BRACKETS, i);
                 stackRound.push(myBracket);
-            }
-            else if (symbols[i] == ')' && stackRound.size() != 0) {
+            } else if (symbols[i] == ')' && !stackRound.empty()) {
                 MyBracket endRound = stackRound.pop();
                 if (endRound != null && endRound.getSymbol().equals(ROUND_BRACKETS)) {
                     endRound.setEnd(i);
@@ -65,11 +64,10 @@ public class MySortBrackets {
                 }
             }
             //если символ '{' - то пушится в стек
-            if (symbols[i] == '{'){
+            if (symbols[i] == '{') {
                 MyBracket myBracket = new MyBracket(SQUIGGLY_BRACKETS, i);
                 stackSquiggly.push(myBracket);
-            }
-            else if (symbols[i] == '}' && stackSquiggly.size() != 0) {
+            } else if (symbols[i] == '}' && !stackSquiggly.empty()) {
                 MyBracket endSquiggly = stackSquiggly.pop();
                 if (endSquiggly != null && endSquiggly.getSymbol().equals(SQUIGGLY_BRACKETS)) {
                     endSquiggly.setEnd(i);
