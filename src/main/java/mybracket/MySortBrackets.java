@@ -46,10 +46,10 @@ public class MySortBrackets {
             //после if, если следующий символ в цикле не '['  - то перескакиваем сюда и ищем обратную скобку ']'
             //допилил обход ошибки пустого стека!
             else if (symbols[i] == ']' && !stackSquare.empty()) {
-                MyBracket endElement = stackSquare.pop();
-                if (endElement != null && endElement.getSymbol().equals(SQUARE_BRACKETS)) {
-                    endElement.setEnd(i);
-                    result.add(endElement);
+                MyBracket endSquare = stackSquare.pop();
+                if (endSquare != null && endSquare.getSymbol().equals(SQUARE_BRACKETS)) {
+                    endSquare.setEnd(i);
+                    result.add(endSquare);
                 }
             }
             //если символ '(' - то пушится в стек
@@ -58,10 +58,10 @@ public class MySortBrackets {
                 stackRound.push(myBracket);
             }
             else if (symbols[i] == ')' && stackRound.size() != 0) {
-                MyBracket endElement = stackRound.pop();
-                if (endElement != null && endElement.getSymbol().equals(ROUND_BRACKETS)) {
-                    endElement.setEnd(i);
-                    result.add(endElement);
+                MyBracket endRound = stackRound.pop();
+                if (endRound != null && endRound.getSymbol().equals(ROUND_BRACKETS)) {
+                    endRound.setEnd(i);
+                    result.add(endRound);
                 }
             }
             //если символ '{' - то пушится в стек
@@ -70,10 +70,10 @@ public class MySortBrackets {
                 stackSquiggly.push(myBracket);
             }
             else if (symbols[i] == '}' && stackSquiggly.size() != 0) {
-                MyBracket endElement = stackSquiggly.pop();
-                if (endElement != null && endElement.getSymbol().equals(SQUIGGLY_BRACKETS)) {
-                    endElement.setEnd(i);
-                    result.add(endElement);
+                MyBracket endSquiggly = stackSquiggly.pop();
+                if (endSquiggly != null && endSquiggly.getSymbol().equals(SQUIGGLY_BRACKETS)) {
+                    endSquiggly.setEnd(i);
+                    result.add(endSquiggly);
                 }
             }
         }
