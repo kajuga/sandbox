@@ -1,13 +1,7 @@
 package mybracket;
 
 public class MyBracket {
-
-
-
-
     private String symbol;
-
-    //объявил поля экземпляра
     private int begin;
     private int end;
 
