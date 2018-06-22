@@ -36,7 +36,8 @@ class LinkedListDemo {
 
         // Get and set a value.
         String val = ll.get(2);
-        ll.set(2, val + " Changed");
+        //тут пркольный момент
+        ll.set(3, val + " Changed");
 
         System.out.println("ll after change: " + ll);
     }
