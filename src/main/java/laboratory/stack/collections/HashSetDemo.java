@@ -5,7 +5,8 @@ import java.util.*;
 class HashSetDemo {
     public static void main(String args[]) {
         // Create a hash set.
-        HashSet<String> hs = new HashSet<String>();
+//        HashSet<String> hs = new HashSet<String>();
+        LinkedHashSet<String> hs = new LinkedHashSet <>();
 
         // Add elements to the hash set.
         hs.add("Beta");
