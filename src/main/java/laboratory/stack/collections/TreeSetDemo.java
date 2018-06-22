@@ -15,6 +15,10 @@ class TreeSetDemo {
         ts.add("F");
         ts.add("D");
 
-        System.out.println(ts);
+        System.out.println("Стартовое отсортированное множество" + ts);
+        System.out.println("...");
+        System.out.println(ts.subSet("A","E"));
+
+
     }
 }
