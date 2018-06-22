@@ -28,7 +28,7 @@ class CompDemo {
 
         // Display the elements.
         for(String element : ts)
-            System.out.print(element + " ");
+            System.out.print(element + " \n");
 
         System.out.println();
     }
