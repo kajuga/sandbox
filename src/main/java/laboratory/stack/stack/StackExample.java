@@ -1,4 +1,4 @@
-package laboratory.stack;
+package laboratory.stack.stack;
 
 import java.util.Stack;
 import java.util.EmptyStackException;
