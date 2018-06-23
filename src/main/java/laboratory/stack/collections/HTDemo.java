@@ -4,8 +4,7 @@ import java.util.*;
 
 class HTDemo {
     public static void main(String args[]) {
-        Hashtable<String, Double> balance =
-                new Hashtable<String, Double>();
+        Hashtable<String, Double> balance = new Hashtable<String, Double>();
 
         Enumeration<String> names;
         String str;
