@@ -1,4 +1,4 @@
-package laboratory.stack.enumz;
+package laboratory.enumz;
 
 import java.util.Arrays;
 

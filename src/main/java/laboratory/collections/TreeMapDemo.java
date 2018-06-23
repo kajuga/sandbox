@@ -1,30 +1,12 @@
-package laboratory.stack.collections;
+package laboratory.collections;
 
 import java.util.*;
 
-// Compare last whole words in two strings.
-class TComp implements Comparator<String> {
-    public int compare(String aStr, String bStr) {
-        int i, j, k;
-
-        // Find index of beginning of last name.
-        i = aStr.lastIndexOf(' ');
-        j = bStr.lastIndexOf(' ');
-
-        k = aStr.substring(i).compareToIgnoreCase(bStr.substring(j));
-        if(k==0) // last names match, check entire name
-            return aStr.compareToIgnoreCase(bStr);
-        else
-            return k;
-    }
-
-    // No need to override equals.
-}
-
-class TreeMapDemo2 {
+class TreeMapDemo {
     public static void main(String args[]) {
+
         // Create a tree map.
-        TreeMap<String, Double> tm = new TreeMap<String, Double>(new TComp());
+        TreeMap<String, Double> tm = new TreeMap<String, Double>();
 
         // Put elements to the map.
         tm.put("John Doe", new Double(3434.34));
@@ -44,7 +26,7 @@ class TreeMapDemo2 {
         System.out.println();
 
         // Deposit 1000 into John Doe's account.
-        double balance =  tm.get("John Doe");
+        double balance = tm.get("John Doe");
         tm.put("John Doe", balance + 1000);
 
         System.out.println("John Doe's new balance: " +
