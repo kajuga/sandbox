@@ -10,9 +10,9 @@ class TreeSetDemo {
         // Add elements to the tree set.
         ts.add("C");
         ts.add("A");
-        ts.add("B");
+        ts.add("1");
         ts.add("E");
-        ts.add("F");
+        ts.add("3");
         ts.add("D");
 
         System.out.println("Стартовое отсортированное множество" + ts);
