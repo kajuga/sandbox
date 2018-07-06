@@ -2,6 +2,7 @@ package laboratory.lambda;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Lambda_Example_2 {
@@ -19,6 +20,7 @@ public class Lambda_Example_2 {
         list.forEach(x -> System.out.println(x));
         System.out.println("Моя модификация с пробелом");
         list.forEach(z -> System.out.print(z + " "));
+
     }
 
     public static void evaluate(List list, Predicate predicate) {
@@ -29,5 +31,7 @@ public class Lambda_Example_2 {
         }
         System.out.println();
     }
+
+
 }
 
