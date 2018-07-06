@@ -27,5 +27,6 @@ public class Step_6_ArrayList {
                 add(7);
             }
         };
+        System.out.println(list3);
     }
 }
