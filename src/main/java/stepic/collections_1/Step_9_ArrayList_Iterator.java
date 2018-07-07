@@ -18,7 +18,6 @@ public class Step_9_ArrayList_Iterator {
 
     public static void main(String[] args) {
 
-
         List<Integer> delList = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             delList.add(i);
