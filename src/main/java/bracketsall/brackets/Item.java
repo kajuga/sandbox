@@ -1,4 +1,4 @@
-package bracket;
+package bracketsall.brackets;
 
 public class Item {
     private Bracket bracket;

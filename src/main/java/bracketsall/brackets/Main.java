@@ -1,4 +1,4 @@
-package brackets;
+package bracketsall.brackets;
 
 public class Main {
     public static void main(String[] args) {

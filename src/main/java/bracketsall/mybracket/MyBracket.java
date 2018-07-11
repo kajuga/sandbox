@@ -1,4 +1,4 @@
-package mybracket;
+package bracketsall.mybracket;
 
 public class MyBracket {
     private String symbol;

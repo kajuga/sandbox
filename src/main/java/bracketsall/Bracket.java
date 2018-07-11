@@ -1,4 +1,4 @@
-package bracket;
+package bracketsall;
 
 public enum Bracket {
     SQUARE('[', ']'),

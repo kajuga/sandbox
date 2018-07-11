@@ -1,4 +1,4 @@
-package parsebrackers;
+package bracketsall.parsebrackers;
 
 /**
  * Brackets - скобки
