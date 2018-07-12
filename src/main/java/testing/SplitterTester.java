@@ -18,5 +18,9 @@ public class SplitterTester {
         for (String ssstttrr : sortedList) {
             System.out.println(ssstttrr);
         }
+
+//        sortedList.clear();
+//        System.out.println(sortedList);
+
         }
     }
