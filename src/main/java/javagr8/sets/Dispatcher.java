@@ -1,5 +1,6 @@
 package javagr8.sets;
 
+import java.util.Iterator;
 import java.util.NavigableSet;
 import java.util.TreeSet;
 
@@ -15,10 +16,10 @@ public class Dispatcher {
 //        System.out.println(ts.add(7));
         System.out.println("Основная коллекция: " + ts);
 //        System.out.println(ts.ceiling(10));
-//        NavigableSet<Car> tc = new TreeSet <>();
-//        tc.add(new Car(5000));
-//        tc.add(new Car(3000));
-//        System.out.println(tc);
+        NavigableSet<Car> tc = new TreeSet <>();
+        tc.add(new Car(5000));
+        tc.add(new Car(3000));
+        System.out.println(tc);
         NavigableSet<Integer> tc1 = ts.headSet(5, true);
         System.out.println("Вывод в консоль подколлекции элементов до цифры 5, включая 5: " + tc1);
         tc1.add(3);
@@ -27,6 +28,25 @@ public class Dispatcher {
         ts.add(8);
         System.out.println("В  основную коллекцию добавил 8, на выходе вот что: " + ts);
         System.out.println("Вывод подколлекции: " + tc1);
+        Iterator<Integer> iterator = ts.iterator();
+        while (iterator.hasNext()){
+            Integer temp = iterator.next();
+            temp++;
+//            System.out.println(iterator.next());
+        }
+        System.out.println(ts);
+        System.out.println("Машинки: " + tc);
+
+        Iterator<Car> carIterator = tc.iterator();
+        while(carIterator.hasNext()){
+//            System.out.println(carIterator.next());
+            Car temp = carIterator.next();
+            temp.price++;
+
+        }
+        System.out.println("Машинки измененные итератором: " + tc);
+
+
     }
 }
 
