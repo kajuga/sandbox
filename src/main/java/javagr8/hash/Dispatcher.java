@@ -12,6 +12,8 @@ public class Dispatcher {
         hm.put(c1, "Serg");
         hm.put(c2, "Mary");
         hm.put(c3, "Ann");
+        Car find = new Car(0, "Audi");
+        System.out.println(hm.get(find));
 
 
 
@@ -29,7 +31,11 @@ class Car{
         this.moodel = moodel;
     }
     public int hashCode(){
-        return this.price * 17;
+        return this.moodel.length() * 17;
     }
 
+    @Override
+    public boolean equals(Object o) {
+       return this.moodel.equals(((Car)o).moodel);
+    }
 }

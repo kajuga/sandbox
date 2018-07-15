@@ -26,6 +26,13 @@ public class JustSet {
             System.out.println("Мой LinkedHashSet: " + car);
         }
 
+        Iterator<Car> iterator = set2.iterator();
+        while (iterator.hasNext()){
+            System.out.println("Мой итератор" + iterator.next());
+        }
+
+
+
         SortedSet<Car> treeSet = new TreeSet <>();
         treeSet.add(new Car(9000));
         treeSet.add(new Car(5000));
@@ -35,13 +42,7 @@ public class JustSet {
             System.out.println("Мой TreeSet: " + car3);
         }
 
-        for (Car car: set) {
-            System.out.println("Мой HashSet после TreeSet: " + car);
-        }
 
-        for (Car car: set2) {
-            System.out.println("Мой LinkedHashSet после TreeSet: " + car);
-        }
 
 
 
