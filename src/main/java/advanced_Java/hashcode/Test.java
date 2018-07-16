@@ -57,10 +57,20 @@ class Person{
         return name.equals(person.name);
     }
 
+    // {object} -> {int}
     @Override
     public int hashCode() {
         int result = id;
         result = 31 * result + name.hashCode();
         return result;
     }
+    /*
+    контракт hashCode() equals()
+    1) у двух вызываемых объектов вызываемвзываем метод hashCode()
+    если хеши разные -> два объекта точно разные.
+    2) если хэш у двух объектов одинаковые, то -> equals()
+    выдает точный ответ - одинаковые или нет.
+
+     */
+
 }
