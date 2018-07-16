@@ -19,6 +19,9 @@ public class Setz {
         hashSet.add("Tom");
         hashSet.add("Tom");
 
+        for(String name : hashSet){
+            System.out.println(name);
+        }
 
 
 
