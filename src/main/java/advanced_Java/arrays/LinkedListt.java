@@ -23,10 +23,5 @@ public class LinkedListt {
         long end = System.currentTimeMillis();
 
         System.out.println(end - start);
-
-
-
-
     }
-
 }
