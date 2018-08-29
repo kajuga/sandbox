@@ -9,7 +9,6 @@ public class comparators {
 
         List<String> animals = new ArrayList <>();
 
-
         animals.add("dog");
         animals.add("cat");
         animals.add("frog");
@@ -17,9 +16,5 @@ public class comparators {
 
         Collections.sort(animals);
         System.out.println(animals);
-
-
     }
-
-
 }
