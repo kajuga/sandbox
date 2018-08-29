@@ -10,9 +10,8 @@ public class Test {
         Map<Person, String> map = new HashMap <>();
         Set<Person> set = new HashSet<>();
 
-
         Person person1 = new Person(1, "Mike");
-        Person person2= new Person(1, "Mike");
+        Person person2 = new Person(1, "Mike");
 
         map.put(person1, "123");
         map.put(person2, "123");
@@ -22,12 +21,8 @@ public class Test {
 
         System.out.println(map);
         System.out.println(set);
-
-
     }
-
 }
-
 
 class Person{
     private int id;
