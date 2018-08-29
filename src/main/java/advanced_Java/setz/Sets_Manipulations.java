@@ -42,5 +42,4 @@ public class Sets_Manipulations {
         System.out.println(difference);    //[0, 1]
 
     }
-
 }
