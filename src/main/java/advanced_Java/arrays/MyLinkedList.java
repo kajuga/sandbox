@@ -3,7 +3,6 @@ package advanced_Java.arrays;
 import java.util.Arrays;
 
 public class MyLinkedList {
-
     private Node head;
     private int size;
 
@@ -17,12 +16,9 @@ public class MyLinkedList {
                 temp = temp.getNext();
             }
             temp.setNext(new Node(value));
-
         }
         size++;
-
     }
-
 
     public String toString(){
 
@@ -36,9 +32,6 @@ public class MyLinkedList {
         return Arrays.toString(result);
 
     }
-
-
-
 
     private static class Node{
         private int value;
@@ -64,5 +57,4 @@ public class MyLinkedList {
             this.next = next;
         }
     }
-
 }
