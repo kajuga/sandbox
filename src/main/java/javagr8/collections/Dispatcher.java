@@ -23,11 +23,5 @@ public class Dispatcher {
         System.out.println(al);
         al = new ArrayList (Arrays.asList(c));
         System.out.println(al);
-
-
-
     }
-
-
-
 }

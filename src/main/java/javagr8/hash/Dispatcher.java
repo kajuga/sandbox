@@ -14,13 +14,8 @@ public class Dispatcher {
         hm.put(c3, "Ann");
         Car find = new Car(0, "Audi");
         System.out.println(hm.get(find));
-
-
-
     }
-
 }
-
 
 class Car{
     int price;
