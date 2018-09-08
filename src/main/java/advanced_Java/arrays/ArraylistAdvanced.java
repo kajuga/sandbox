@@ -1,10 +1,11 @@
 package advanced_Java.arrays;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Test {
+public class ArraylistAdvanced {
     public static void main(String[] args) {
-        ArrayList<Integer> arrayList = new ArrayList <>();
+        List<Integer> arrayList = new ArrayList <>();
 
         for (int i = 0; i <100; i++) {
             arrayList.add(i);
