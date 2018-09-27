@@ -9,6 +9,14 @@ public class Program {
         Radio radio = new Radio();
         powerOn.consumersAdder(lamp);
         powerOn.consumersAdder(radio);
+
+        powerOn.consumersAdder(new Consumer() {
+            @Override
+            public void connected() {
+                System.out.println("Короткое замыкание!!");
+            }
+        });
+
         powerOn.electrisityON();
 
     }
