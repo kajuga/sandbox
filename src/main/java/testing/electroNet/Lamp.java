@@ -7,8 +7,7 @@ public class Lamp implements Consumer{
     }
 
 
-    @Override
-    public void connected() {
+    public void connected(Object sender) {
         lampOn();
     }
 }

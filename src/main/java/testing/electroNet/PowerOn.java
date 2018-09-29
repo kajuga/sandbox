@@ -18,7 +18,7 @@ public class PowerOn {
 
         if(consumers != null) {
             for (Consumer cons: consumers) {
-                cons.connected();
+                cons.connected(this);
             }
         }
     }

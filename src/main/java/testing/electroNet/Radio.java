@@ -7,7 +7,7 @@ public class Radio implements Consumer{
     }
 
     @Override
-    public void connected() {
+    public void connected(Object sender) {
         radioOn();
     }
 }
