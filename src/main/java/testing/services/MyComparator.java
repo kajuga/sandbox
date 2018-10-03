@@ -14,26 +14,20 @@ public class MyComparator {
         list.add("kkono");
         list.add("sssbono");
 
-        Collections.sort(list, new MyComparatorForThis());
+        Collections.sort(list, (s, t1) -> {
+                int result;
+                if(s.length() > t1.length()) {
+                    result = 1;
+                } else if (s.length() < t1.length()) {
+                    result = -1;
+                } else {
+                    result = 0;
+                }
+                return result;
+            });
 
 
         System.out.println(list);
     }
 }
-
-     class MyComparatorForThis implements Comparator<String> {
-
-        @Override
-        public int compare(String s, String t1) {
-            int result;
-            if(s.length() > t1.length()) {
-                result = 1;
-            } else if (s.length() < t1.length()) {
-                result = -1;
-            } else {
-                result = 0;
-            }
-            return result;
-        }
-    }
 
