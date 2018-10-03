@@ -33,6 +33,8 @@ public class Program {
         int y = 7;
 
         IntStream.range(x, y).reduce(1, (prevRes,current) -> prevRes*current);
+
+
         powerOn.electrisityON();
 
     }
