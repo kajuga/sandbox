@@ -31,6 +31,13 @@ public class SimpleArray {
         linkedList.add("123");
         linkedList.set(2, "333");
 
+        ArrayList<String> arrayList = new ArrayList <>();
+
+        arrayList.add("111");
+        arrayList.add("222");
+        arrayList.add("000");
+//        arrayList.sort();
+
 
 
 
