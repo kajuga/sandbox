@@ -27,12 +27,5 @@ public class Main {
         System.out.println(q.poll());
         System.out.println(q.poll());
         System.out.println(q);
-
-
-
-
     }
-
-
-
 }
