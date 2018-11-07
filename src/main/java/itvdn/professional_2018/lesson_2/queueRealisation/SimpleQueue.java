@@ -53,14 +53,6 @@ class QueueMain {
         simpleQueue.insert(90);
         simpleQueue.insert(100);
         simpleQueue.insert(110);
-        simpleQueue.insert(120);
-        simpleQueue.insert(130);
-        simpleQueue.insert(140);
-        simpleQueue.insert(150);
-        simpleQueue.insert(160);
-        simpleQueue.insert(170);
-        simpleQueue.insert(180);
-        simpleQueue.insert(190);
         while (!simpleQueue.isEmpty()){
             long n = simpleQueue.remove();
             System.out.println(n + " ");
