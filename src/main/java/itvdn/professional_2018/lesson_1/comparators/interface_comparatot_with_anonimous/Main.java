@@ -1,4 +1,4 @@
-package itvdn.professional_2018.comparators.interface_comparatot_with_anonimous;
+package itvdn.professional_2018.lesson_1.comparators.interface_comparatot_with_anonimous;
 
 import java.util.Arrays;
 import java.util.Comparator;

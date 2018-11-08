@@ -1,4 +1,4 @@
-package itvdn.professional_2018.maps;
+package itvdn.professional_2018.lesson_1.maps;
 
 import java.util.HashMap;
 import java.util.Map;

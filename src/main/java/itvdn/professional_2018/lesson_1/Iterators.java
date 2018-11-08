@@ -1,4 +1,4 @@
-package itvdn.professional_2018;
+package itvdn.professional_2018.lesson_1;
 
 public class Iterators {
 

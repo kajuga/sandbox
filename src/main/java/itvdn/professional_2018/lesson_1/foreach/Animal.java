@@ -1,4 +1,4 @@
-package itvdn.professional_2018.foreach;
+package itvdn.professional_2018.lesson_1.foreach;
 
 public class Animal {
     String breed;

@@ -1,4 +1,4 @@
-package itvdn.professional_2018.iteratorWithObjects;
+package itvdn.professional_2018.lesson_1.homeWork;
 
 public class Animal {
     String breed;

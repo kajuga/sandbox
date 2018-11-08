@@ -1,4 +1,4 @@
-package itvdn.professional_2018.comparators.sortingObjects;
+package itvdn.professional_2018.lesson_1.comparators.sortingObjects;
 
 import java.util.Arrays;
 

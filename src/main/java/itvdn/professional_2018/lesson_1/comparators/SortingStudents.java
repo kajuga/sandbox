@@ -1,4 +1,4 @@
-package itvdn.professional_2018.comparators;
+package itvdn.professional_2018.lesson_1.comparators;
 
 import java.util.Arrays;
 

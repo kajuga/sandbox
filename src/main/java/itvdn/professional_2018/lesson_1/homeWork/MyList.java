@@ -1,6 +1,4 @@
-package itvdn.professional_2018.homeWork;
-
-import java.util.*;
+package itvdn.professional_2018.lesson_1.homeWork;
 
 public class MyList {
 //    public static void main(String[] args) {

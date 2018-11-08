@@ -1,4 +1,4 @@
-package itvdn.professional_2018.comparators.sortingObjects;
+package itvdn.professional_2018.lesson_1.comparators.sortingObjects;
 
 public class Animal2 implements Comparable<Animal2> {
     String breed;

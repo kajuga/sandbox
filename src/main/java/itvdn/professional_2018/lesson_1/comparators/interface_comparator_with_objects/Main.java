@@ -1,7 +1,6 @@
-package itvdn.professional_2018.comparators.interface_comparator_with_objects;
+package itvdn.professional_2018.lesson_1.comparators.interface_comparator_with_objects;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {

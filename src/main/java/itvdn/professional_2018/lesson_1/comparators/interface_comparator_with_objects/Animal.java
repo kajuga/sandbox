@@ -1,6 +1,4 @@
-package itvdn.professional_2018.comparators.interface_comparator_with_objects;
-
-import itvdn.professional_2018.comparators.sortingObjects.Animal2;
+package itvdn.professional_2018.lesson_1.comparators.interface_comparator_with_objects;
 
 import java.util.Comparator;
 

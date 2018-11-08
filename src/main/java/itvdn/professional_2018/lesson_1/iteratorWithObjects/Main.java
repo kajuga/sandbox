@@ -1,4 +1,4 @@
-package itvdn.professional_2018.iteratorWithObjects;
+package itvdn.professional_2018.lesson_1.iteratorWithObjects;
 
 import java.util.ArrayList;
 import java.util.Iterator;
