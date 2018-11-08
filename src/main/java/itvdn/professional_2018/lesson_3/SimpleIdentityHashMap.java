@@ -14,16 +14,13 @@ public class SimpleIdentityHashMap {
         identityHashMap.put(new Integer(1), "one");
         identityHashMap.put(new Integer(23), "five");
 
-
         Set set = identityHashMap.entrySet();
         for (Object o : set) {
             Map.Entry<Integer, String> map = (Map.Entry)o;
             System.out.println(map.getKey() + " " + map.getValue());
-            
         }
 
         System.out.println();
-
         HashMap<Integer, String> hashMap = new HashMap<>();
         hashMap.put(new Integer(1), "one");
         hashMap.put(new Integer(11), "two");
@@ -31,14 +28,11 @@ public class SimpleIdentityHashMap {
         hashMap.put(new Integer(1), "one");
         hashMap.put(new Integer(23), "five");
 
-
         Set set2 = hashMap.entrySet();
         for (Object o : set2) {
             Map.Entry<Integer, String> map = (Map.Entry)o;
             System.out.println(map.getKey() + " " + map.getValue());
 
         }
-
-
     }
 }
