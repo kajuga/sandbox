@@ -15,10 +15,16 @@ public class Main {
         //вывожу значение по ключу Vasyl
         System.out.println(treeMap.get("Vasyl"));
 
-        System.out.println(treeMap.containsKey("Abramka"));
-        System.out.println(treeMap.containsValue(new Animal(1000)));
-        System.out.println(treeMap.containsValue(new Animal(3000)));
-
+        System.out.println("Ищу наличие ключа Аbramka, результат - " + treeMap.containsKey("Abramka"));
+        System.out.println("Ищу, есть ли value = 1000??, результат - " + treeMap.containsValue(new Animal(1000)));
+/*
+todo
+разобраться как без
+Animal pet = new Animal(1000);
+        nm.put("Alex", pet);
+        System.out.println(nm.containsValue(pet));
+        узнать, есть ли 1000???
+ */
         Set<String> nameSet = treeMap.keySet();
         System.out.println(nameSet);
         Collection<Animal> petsPrice = treeMap.values();
