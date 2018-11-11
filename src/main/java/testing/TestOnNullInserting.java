@@ -35,7 +35,8 @@ public class TestOnNullInserting {
         System.out.println(nullPriority.add(1));
         System.out.println(nullPriority.add(4));
 //        System.out.println(nullPriority.add(null));
-        System.out.println(nullPriority.poll());
+
+        System.out.println(nullPriority.getClass());
 
 
 
