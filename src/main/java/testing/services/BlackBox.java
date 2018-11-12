@@ -14,28 +14,27 @@ public class BlackBox {
         int prime = 31;
         int result = 1;
         result = prime * result + varA;
-        result = prime *result + varB;
+        result = prime * result + varB;
         return result;
     }
 
-
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
+        if(this == o) {
             return true;
         }
         if (o == null) {
             return false;
         }
-        BlackBox temp = (BlackBox) o;
-        if (varA != temp.varA) {
+        BlackBox test = (BlackBox) o;
+        if(this.varA != test.varA) {
             return false;
         }
-        if (varB != temp.varB) {
+        if(this.varB != test.varB) {
             return false;
-        } else {
-            return true;
         }
+        return true;
+
     }
 
     public static void main(String[] args) {
@@ -48,8 +47,6 @@ public class BlackBox {
         System.out.println(bb1.getClass());
         System.out.println(bb2.getClass());
         System.out.println(bb3.getClass());
-
-
     }
 }
 
