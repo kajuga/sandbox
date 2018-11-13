@@ -1,5 +1,7 @@
 package testing.services;
 
+import java.util.Objects;
+
 public class BlackBox {
     int varA;
     int varB;
@@ -11,11 +13,15 @@ public class BlackBox {
 
     @Override
     public int hashCode() {
-        int prime = 31;
-        int result = 1;
-        result = prime * result + varA;
-        result = prime * result + varB;
-        return result;
+//        int prime = 31;
+//        int result = 1;
+//        result = prime * result + varA;
+//        result = prime * result + varB;
+//        return result;
+        int hash = 31;
+        hash = hash * 17 + varA;
+        hash = hash * 17 + varB;
+        return hash;
     }
 
     @Override
