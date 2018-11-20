@@ -5,7 +5,7 @@ class Product{
     boolean isProdused;
 
     synchronized void getIdProduct() {
-        if(!isProdused) {
+        if(isProdused != true) {
             System.out.println("..." + isProdused);
             try {
                 wait();
