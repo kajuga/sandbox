@@ -32,7 +32,7 @@ public class Account {
 
     synchronized void waitAndWithdraw(long amount)
             throws InterruptedException {
-        checkAmountNonNegative(amount);
+        checkAmountNonNegative(amount );
         while (balance < amount) {
             System.out.println("Current balance: " + balance);
             wait();

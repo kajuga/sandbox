@@ -16,21 +16,21 @@ public class Account {
         return balance;
     }
 
-    void deposit(long amount) {
+    public synchronized void deposit(long amount) {
         checkAmountNonNegative(amount);
-        synchronized (this) {
+//        synchronized (this) {
             balance += amount;
-        }
+//        }
     }
 
-    void withdraw(long amount) {
+    public synchronized void withdraw(long amount) {
         checkAmountNonNegative(amount);
-        synchronized (this) {
+//        synchronized (this) {
             if (balance < amount) {
                 throw new IllegalArgumentException("not enough money");
             }
             balance -= amount;
-        }
+//        }
     }
 
     private static void checkAmountNonNegative(long amount) {
