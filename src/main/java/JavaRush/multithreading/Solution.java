@@ -7,53 +7,50 @@ import java.util.List;
 */
 
 public class Solution {
-    public static byte threadCount = 3;
-    static List<Thread> threads = new ArrayList<Thread>(threadCount);
+    static int capasity = 3;
+    static List<Thread> waterList = new ArrayList <>(capasity);
 
     public static void main(String[] args) throws InterruptedException {
-        initThreadsAndStart();
+        InitianorStarter();
         Thread.sleep(3000);
-        ourInterruptMethod();
+        Interruptor();
     }
 
-    public static void ourInterruptMethod() {
-        for (int i = 0; i < threadCount; i++) {
-            threads.get(i).interrupt();
+    static void Interruptor() {
+        for (Thread thread: waterList) {
+            thread.interrupt();
         }
-        //add your code here - добавь код тут
+
+
     }
 
-    private static void initThreadsAndStart() {
+    static void InitianorStarter() {
         Water water = new Water("water");
-        for (int i = 0; i < threadCount; i++) {
-            threads.add(new Thread(water, "#" + i));
+        for (int i = 0; i < capasity; i++) {
+            waterList.add(new Thread(water, "#" + i));
         }
-
-        for (int i = 0; i < threadCount; i++) {
-            threads.get(i).start();
+        for (int i = 0; i < capasity; i++) {
+            waterList.get(i).start();
         }
     }
+}
 
-    public static class Water implements Runnable {
-        private String sharedResource;
+    class Water implements Runnable {
+    boolean isInterrupt = false;
+    String commonResourse;
 
-        public Water(String sharedResource) {
-            this.sharedResource = sharedResource;
+        public Water(String threadName) {
+            this.commonResourse = threadName;
         }
 
-        public void run() {
-            //fix 2 variables - исправь 2 переменных
-            boolean isCurrentThreadInterrupted = Thread.currentThread().isInterrupted();
-            String threadName = Thread.currentThread().getName();
-
-            try {
-                while (!isCurrentThreadInterrupted) {
-
-                    System.out.println("Объект " + sharedResource + ", нить " + threadName);
-                    Thread.sleep(1000);
-                }
-            } catch (InterruptedException e) {
+        @Override
+    public void run() {
+        try {
+            while(!isInterrupt) {
+                System.out.println("Объект " + commonResourse + " нить - " + Thread.currentThread().getName());
+                Thread.sleep(1000);
             }
+        } catch (InterruptedException e) {
         }
     }
 }
