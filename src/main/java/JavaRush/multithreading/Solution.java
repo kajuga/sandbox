@@ -1,37 +1,50 @@
 package JavaRush.multithreading;
 
-/*
-Последовательные выполнения нитей
-*/
-
 public class Solution {
-    public static MyThread t = new MyThread();
-    static String message = "inside main ";
+    public static int number = 5;
 
-    public static void main(String a[]) throws Exception {
-        t.start();
-        t.join();
-        for (int i = 0; i < 10; i++) {
-            System.out.println(message + i);
-            sleep();
+    public static void main(String[] args) throws InterruptedException {
+        new Thread(new CountdownRunnable(), "Уменьшаем").start();
+        new Thread(new CountUpRunnable(), "Увеличиваем").start();
+    }
+
+    public static class CountUpRunnable implements Runnable {
+        //Add your code here - добавь код тут
+        private int countIndexUp = 1;
+        @Override
+        public void run() {
+            try {
+                while (countIndexUp <= number) {
+                    System.out.println(toString());
+                    countIndexUp +=1;
+                    Thread.sleep(100);
+                }
+            } catch (InterruptedException e) {
+
+            }
+        }
+        public String toString() {
+            return Thread.currentThread().getName() + ": " + countIndexUp;
         }
     }
 
-    public static void sleep() {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-        }
-    }
-
-    static class MyThread extends Thread {
-        String message = "inside MyThread ";
+    public static class CountdownRunnable implements Runnable {
+        private int countIndexDown = Solution.number;
 
         public void run() {
-            for (int i = 0; i < 10; i++) {
-                System.out.println(message + i);
-                Solution.sleep();
+            try {
+                while (true) {
+                    System.out.println(toString());
+                    countIndexDown -= 1;
+                    if (countIndexDown == 0) return;
+                    Thread.sleep(500);
+                }
+            } catch (InterruptedException e) {
             }
+        }
+
+        public String toString() {
+            return Thread.currentThread().getName() + ": " + countIndexDown;
         }
     }
 }
