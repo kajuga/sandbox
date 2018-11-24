@@ -1,50 +1,66 @@
 package JavaRush.multithreading;
 
-public class Solution {
-    public static int number = 5;
+import java.util.ArrayList;
+import java.util.List;
 
+public class Solution {
     public static void main(String[] args) throws InterruptedException {
-        new Thread(new CountdownRunnable(), "Уменьшаем").start();
-        new Thread(new CountUpRunnable(), "Увеличиваем").start();
+        OnlineGame onlineGame = new OnlineGame();
+        onlineGame.start();
     }
 
-    public static class CountUpRunnable implements Runnable {
-        //Add your code here - добавь код тут
-        private int countIndexUp = 1;
+    public static class OnlineGame extends Thread {
+        public static volatile boolean isWinnerFound = false;
+
+        public static List<String> steps = new ArrayList<String>();
+
+        static {
+            steps.add("Начало игры");
+            steps.add("Сбор ресурсов");
+            steps.add("Рост экономики");
+            steps.add("Убийство врагов");
+        }
+
+        protected Gamer gamer1 = new Gamer("Ivanov", 3);
+        protected Gamer gamer2 = new Gamer("Petrov", 1);
+        protected Gamer gamer3 = new Gamer("Sidorov", 5);
+
+        public void run() {
+            gamer1.start();
+            gamer2.start();
+            gamer3.start();
+
+            while (!isWinnerFound) {
+            }
+            gamer1.interrupt();
+            gamer2.interrupt();
+            gamer3.interrupt();
+        }
+    }
+
+    public static class Gamer extends Thread {
+        private int rating;
+
+        public Gamer(String name, int rating) {
+            super(name);
+            this.rating = rating;
+        }
+
         @Override
         public void run() {
             try {
-                while (countIndexUp <= number) {
-                    System.out.println(toString());
-                    countIndexUp +=1;
-                    Thread.sleep(100);
+                for (String st : OnlineGame.steps) {
+
+                    Thread.sleep(1000 / rating);
+                    System.out.println(getName() + ":" + st);
+                }
+                if (!OnlineGame.isWinnerFound) {
+                    OnlineGame.isWinnerFound = true;
+                    System.out.println(getName() + ":победитель!");
                 }
             } catch (InterruptedException e) {
-
+                System.out.println(getName() + ":проиграл");
             }
-        }
-        public String toString() {
-            return Thread.currentThread().getName() + ": " + countIndexUp;
-        }
-    }
-
-    public static class CountdownRunnable implements Runnable {
-        private int countIndexDown = Solution.number;
-
-        public void run() {
-            try {
-                while (true) {
-                    System.out.println(toString());
-                    countIndexDown -= 1;
-                    if (countIndexDown == 0) return;
-                    Thread.sleep(500);
-                }
-            } catch (InterruptedException e) {
-            }
-        }
-
-        public String toString() {
-            return Thread.currentThread().getName() + ": " + countIndexDown;
         }
     }
 }
