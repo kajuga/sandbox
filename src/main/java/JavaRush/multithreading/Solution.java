@@ -10,7 +10,7 @@ public class Solution {
     }
 
     public static class OnlineGame extends Thread {
-        public static volatile boolean isWinnerFound = false;
+        public static boolean isWinnerFound = false;
 
         public static List<String> steps = new ArrayList<String>();
 
@@ -49,17 +49,16 @@ public class Solution {
         @Override
         public void run() {
             try {
-                for (String st : OnlineGame.steps) {
-
-                    Thread.sleep(1000 / rating);
-                    System.out.println(getName() + ":" + st);
-                }
-                if (!OnlineGame.isWinnerFound) {
+                if(!OnlineGame.isWinnerFound) {
+                    for(String sstr : OnlineGame.steps) {
+                        sleep(1000 / rating);
+                        System.out.println(getName() + " " + sstr);
+                    }
+                    System.out.println(getName() + " победитель!!");
                     OnlineGame.isWinnerFound = true;
-                    System.out.println(getName() + ":победитель!");
                 }
             } catch (InterruptedException e) {
-                System.out.println(getName() + ":проиграл");
+                System.out.println(getName() + " проиграл");
             }
         }
     }
