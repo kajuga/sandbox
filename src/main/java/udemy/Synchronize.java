@@ -1,14 +1,14 @@
 package udemy;
 
 public class Synchronize {
-    int counter;
+    volatile int counter;
 
     public static void main(String[] args) throws InterruptedException {
         Synchronize synchronize = new Synchronize();
         synchronize.doWork();
     }
 
-public void increment() {
+public synchronized void increment() {
     counter++;
 }
 

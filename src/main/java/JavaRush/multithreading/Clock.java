@@ -26,7 +26,7 @@ class Clock implements Runnable {
         Thread clockThread2 = new Thread(clock);
         clockThread.start();
         clockThread2.start();
-//        clock.cancel();
+        clock.cancel();
 
         Thread.sleep(10000);
         clock.cancel();
