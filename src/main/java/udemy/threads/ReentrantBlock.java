@@ -9,7 +9,6 @@ import java.util.concurrent.locks.ReentrantLock;
  * Reentrant blocker simple tack
  *
  */
-
 public class ReentrantBlock {
     public static void main(String[] args) throws InterruptedException {
         CountStore countStore = new CountStore();
@@ -25,7 +24,6 @@ public class ReentrantBlock {
         thread2.join();
 
         countStore.showCounter();
-
     }
 }
 
