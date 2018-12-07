@@ -8,8 +8,5 @@ public class Dispatcher {
         Arrays.sort(x);
         int index = Arrays.binarySearch(x, 0);
         System.out.println(index);
-
     }
-
 }
-// -n -1

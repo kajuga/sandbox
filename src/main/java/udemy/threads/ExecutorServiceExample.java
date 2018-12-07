@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-
 /**
  * @author Fedorov Aleksandr (msg2fedorov@gmail.com)
  * ExecutorService simple realisation
@@ -26,7 +25,6 @@ public class ExecutorServiceExample {
         }
     }
 }
-
 
 class Work {
     private volatile int counter;

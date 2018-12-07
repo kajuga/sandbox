@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Step_10_Collections_Retain_Remove {
     public static void main(String[] args) {
-
         List <Integer> list1 = new ArrayList <Integer>(5);
         List <Integer> list2 = new ArrayList <Integer>(5);
 

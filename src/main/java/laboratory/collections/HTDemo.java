@@ -23,7 +23,6 @@ class HTDemo {
             System.out.println(str + ": " +
                     balance.get(str));
         }
-
         System.out.println();
 
         // Deposit 1,000 into John Doe's account.
