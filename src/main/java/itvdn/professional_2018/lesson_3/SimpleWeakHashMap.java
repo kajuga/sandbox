@@ -1,11 +1,5 @@
 package itvdn.professional_2018.lesson_3;
 
-import javafx.util.converter.ShortStringConverter;
-
-import java.lang.ref.PhantomReference;
-import java.lang.ref.ReferenceQueue;
-import java.lang.ref.SoftReference;
-import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.WeakHashMap;
