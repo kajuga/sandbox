@@ -1,9 +1,7 @@
 package udemy.threads;
 
-
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 /**
  * @author Aleksandr Fedorov (msg2fedorov@gmail.com)
  * Reentrant blocker simple tack
