@@ -1,4 +1,4 @@
-package com.itvdn.javaEssential.enums.ex004_abstract_methods;
+package itvdn.javaEssential.enums.ex004_abstract_methods;
 
 
 /**
