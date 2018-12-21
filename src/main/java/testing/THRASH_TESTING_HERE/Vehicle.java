@@ -1,4 +1,4 @@
-package testing;
+package testing.THRASH_TESTING_HERE;
 
 class A {
     protected int x;

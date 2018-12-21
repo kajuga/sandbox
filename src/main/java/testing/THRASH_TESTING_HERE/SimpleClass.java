@@ -1,4 +1,4 @@
-package testing;
+package testing.THRASH_TESTING_HERE;
 
 public class SimpleClass {
     public static void main(String[] args) {
