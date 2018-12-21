@@ -1,4 +1,4 @@
-package com.itvdn.javaEssential.nested_classes.ex005_nestedclasses;
+package itvdn.javaEssential.nested_classes.ex005_nestedclasses;
 
 import java.lang.Math;
 

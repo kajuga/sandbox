@@ -1,4 +1,4 @@
-package com.itvdn.javaEssential.nested_classes.ex004_nestedclasses;
+package itvdn.javaEssential.nested_classes.ex004_nestedclasses;
 
 /**
  * Вложенные классы.
