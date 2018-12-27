@@ -1,34 +1,28 @@
 package testing.lambda;
 
 public class Main {
-
     public static void main(String[] args) {
+        int[] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i;
+        }
 
-        Calcu clc = (x, y) -> x + y;
-        Calcu clc2 = (x, y) -> x - y;
-        Calcu clc3 = (x, y) -> x * y;
-        System.out.println(clc.calculate(5, 5) + " " + clc2.calculate(15, 5) + " " + clc3.calculate(3, 5));
-        System.out.println();
+        Main main = new Main();
+        EqualInterface equalInterface = (x) -> x % 2 == 0;
 
-
-        System.out.println();
-        CalcuNoParameters cnp = () -> 25 -20;
-
-        System.out.println(cnp.calcNoParam());
-
-
-        PrinterInterface prnt = s -> System.out.println(s);
-        prnt.print("!!!!!!!");
-
-
-
-
-
-
-
-
-
+        System.out.println(summator(arr, equalInterface));
     }
 
-
+    private static int summator(int[] arr, EqualInterface eq) {
+        int result = 0;
+        for (int i : arr) {
+            if(eq.isEqual(i)) {
+                result += i;
+            }
+        }
+        return result;
+    }
 }
+
+
+
