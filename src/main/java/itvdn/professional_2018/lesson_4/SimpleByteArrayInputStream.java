@@ -15,5 +15,26 @@ public class SimpleByteArrayInputStream {
 
         }
 
+        String str = "Hello";
+        byte[] arr2= str.getBytes();
+        ByteArrayInputStream byteArrayInputStream1 = new ByteArrayInputStream(arr2, 1, 3);
+
+        int tmp2;
+
+        while ((tmp2 = byteArrayInputStream1.read()) != -1) {
+            System.out.println((char) tmp2 );
+
+        }
+
     }
 }
+
+
+
+
+
+
+
+
+
+
