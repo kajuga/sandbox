@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 public class ZipTesting {
@@ -15,7 +16,8 @@ public class ZipTesting {
 
         String filename = "/home/kajuga/projects/sandbox/src/main/java/Metanit/notes.txt";
         try (ZipOutputStream zout = new ZipOutputStream(new FileOutputStream("/home/kajuga/projects/sandbox/src/main/java/Metanit/notes.zip"));
-        FileInputStream fis = new FileInputStream(filename)) {
+//        ZipInputStream zin = new ZipInputStream(new FileInputStream("/home/kajuga/projects/sandbox/src/main/java/Metanit/notes.zip"));
+             FileInputStream fis = new FileInputStream(filename)) {
 
             ZipEntry entry1 = new ZipEntry("notes.txt");
             zout.putNextEntry(entry1);
@@ -26,6 +28,10 @@ public class ZipTesting {
             zout.write(buffer);
             //закрываю
             zout.closeEntry();
+
+
+
+
 
 
         } catch (FileNotFoundException e) {
