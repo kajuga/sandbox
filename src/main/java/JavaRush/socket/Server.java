@@ -34,7 +34,7 @@ public class Server {
 
             while (true) {
                 line = in.readUTF();
-                System.out.println("The dumb client sent me this line" + line);
+                    System.out.println("The dumb client sent me this line" + line);
                 System.out.println("I'm sending it back...");
                 out.writeUTF(line + " back!");
                 out.flush();
