@@ -26,14 +26,14 @@ public class Consistensy {
             int maxCount = 0;
             for (int i = 0; i < arr.length; i++) {
                 if (i == arr.length - 1 || arr[i] > arr[i + 1]) {
-                if (maxCount < count) {
-                    maxCount = count;
-                    index = i + 1 - count;
+                    if (maxCount < count) {
+                        maxCount = count;
+                        index = i + 1 - count;
+                    }
+                    count = 1;
+                } else{
+                    count++;
                 }
-                count = 1;
-            } else{
-                count++;
-            }
 
         }
             return Arrays.copyOfRange(arr, index,index +maxCount);
