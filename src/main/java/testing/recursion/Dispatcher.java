@@ -12,6 +12,9 @@ public class Dispatcher {
         //факториал рекурсией
         int res = fact(5);
         System.out.println("res: " + res);
+        System.out.println();
+        int fibo = fibonazzi(3);
+        System.out.println("fibo: " + fibo);
     }
 
 //Вычисляю факториал - рекурсия
@@ -19,6 +22,13 @@ public class Dispatcher {
         if(n == 1) return 1;
         if(n == 2) return 2;
         return fact(n -1) * n;
+    }
+    //фибоначи - сумма всех предыдущих чисел...
+
+    public static int fibonazzi(int n) {
+        if((n == 1) || (n == 2)) return 1;
+
+        return fibonazzi(n - 1) + (n - 2);
     }
 
 
