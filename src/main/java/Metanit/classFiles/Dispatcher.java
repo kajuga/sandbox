@@ -12,12 +12,12 @@ public class Dispatcher {
         }
 
         File someTextRoot = new File(Dispatcher.class.getClassLoader().getResource("SomeTextRoot.txt").getPath());
-        if(someTextRoot.isFile()) {
+        if (someTextRoot.isFile()) {
             System.out.println("YEP!");
         }
 
         File someText = new File(Dispatcher.class.getClassLoader().getResource("SomeDir/SomeText.txt").getPath());
-        if(someText.isFile()) {
+        if (someText.isFile()) {
             System.out.println("НННННННН!");
         }
 
@@ -26,27 +26,34 @@ public class Dispatcher {
 
 
         File newFile = new File("/home/kajuga/projects/sandbox/src/main/java/resources/SomeDir/111.txt");
-        try
-        {
+        try {
             boolean created = newFile.createNewFile();
-            if(created)
+            if (created)
                 System.out.println("File has been created");
-        }
-        catch(IOException ex){
+        } catch (IOException ex) {
 
             System.out.println(ex.getMessage());
         }
 
 
-        Thread.sleep(3000);
-        System.out.println(newFile.delete());
+//        Thread.sleep(10000);
+//        System.out.println(newFile.delete());
+        System.out.println("=============================");
+        if (dir.isDirectory()) {
 
+            for (File item : dir.listFiles()) {
+                if (item.isDirectory()) {
+                    System.out.println(item.getName() + " \t folder");
+                } else {
+                    System.out.println(item.getName() + " \t file");
+                }
+            }
+
+
+        }
 
 
     }
-
-
-
 }
 
 
