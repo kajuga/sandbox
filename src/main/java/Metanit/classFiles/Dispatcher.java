@@ -6,23 +6,23 @@ import java.io.IOException;
 public class Dispatcher {
     public static void main(String[] args) throws InterruptedException {
 
-        File dir = new File(Dispatcher.class.getClassLoader().getResource("SomeDir").getPath());
-        if (dir.isDirectory()) {
-            System.out.println("!!!!!!!!");
-        }
-
-        File someTextRoot = new File(Dispatcher.class.getClassLoader().getResource("SomeTextRoot.txt").getPath());
-        if (someTextRoot.isFile()) {
-            System.out.println("YEP!");
-        }
-
-        File someText = new File(Dispatcher.class.getClassLoader().getResource("SomeDir/SomeText.txt").getPath());
-        if (someText.isFile()) {
-            System.out.println("НННННННН!");
-        }
-
-        System.out.println(new File("/home/kajuga/projects/sandbox/src/main/java/resources/SomeDir").exists());
-        System.out.println("===============");
+//        File dir = new File(Dispatcher.class.getClassLoader().getResource("SomeDir").getPath());
+//        if (dir.isDirectory()) {
+//            System.out.println("!!!!!!!!");
+//        }
+//
+//        File someTextRoot = new File(Dispatcher.class.getClassLoader().getResource("SomeTextRoot.txt").getPath());
+//        if (someTextRoot.isFile()) {
+//            System.out.println("YEP!");
+//        }
+//
+//        File someText = new File(Dispatcher.class.getClassLoader().getResource("SomeDir/SomeText.txt").getPath());
+//        if (someText.isFile()) {
+//            System.out.println("НННННННН!");
+//        }
+//
+//        System.out.println(new File("/home/kajuga/projects/sandbox/src/main/java/resources/SomeDir").exists());
+//        System.out.println("===============");
 
 
         File newFile = new File("/home/kajuga/projects/sandbox/src/main/java/resources/SomeDir/111.txt");
@@ -36,21 +36,22 @@ public class Dispatcher {
         }
 
 
-//        Thread.sleep(10000);
-//        System.out.println(newFile.delete());
+        Thread.sleep(10000);
+        System.out.println(newFile.delete());
+
         System.out.println("=============================");
-        if (dir.isDirectory()) {
-
-            for (File item : dir.listFiles()) {
-                if (item.isDirectory()) {
-                    System.out.println(item.getName() + " \t folder");
-                } else {
-                    System.out.println(item.getName() + " \t file");
-                }
-            }
-
-
-        }
+//        if (dir.isDirectory()) {
+//
+//            for (File item : dir.listFiles()) {
+//                if (item.isDirectory()) {
+//                    System.out.println(item.getName() + " \t folder");
+//                } else {
+//                    System.out.println(item.getName() + " \t file");
+//                }
+//            }
+//
+//
+//        }
 
 
     }

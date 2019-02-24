@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 public class Dispatcher2 {
     public static void main(String[] args) {
-        File dir = new File((Dispatcher2.class.getClassLoader().getResource("SomeDir").getPath()));
+        //File dir = new File((Dispatcher2.class.getClassLoader().getResource("SomeDir").getPath()));
+        File dir = new File("/home/kajuga/projects/sandbox/src/main/java/resources/SomeDir");
 
         if (dir.isDirectory()) {
             File[] list = dir.listFiles();
