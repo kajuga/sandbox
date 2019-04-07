@@ -25,19 +25,10 @@ public class Test_4_1_2 {
     }
 
     public static String getCallerClassAndMethodName() {
-        try {
-            throw new Exception();
-        } catch (Exception e) {
-            StackTraceElement[] elements = e.getStackTrace();
-            if (elements.length >= 3) {
-                return new StringBuilder()
-                        .append(elements[2].getClassName())
-                        .append("#")
-                        .append(elements[2].getMethodName())
-                        .toString();
-            } else {
-                return null;
-            }
+        StackTraceElement[] ste = new Exception().getStackTrace();
+        if (ste.length < 3) {
+            return null;
         }
+        return ste[2].getClassName() + "#" + ste[2].getMethodName();
     }
 }
