@@ -11,7 +11,6 @@ class B extends A{
         this.a = a;
     }
 }
-
 public class MainClass{
     public static void main(String[] args)    {
         A a = new A();
