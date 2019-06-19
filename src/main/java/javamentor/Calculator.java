@@ -2,37 +2,28 @@ package javamentor;
 
 import java.io.*;
 
+/**
+ * @author Fedorov Aleksandr (msg2fedorov@gmail.com)
+ */
 public class Calculator {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        System.out.println("Choose Arabian (1)");
-        System.out.println("Choose Rome (2)");
-
         try {
-            int chooseVar = Integer.parseInt(reader.readLine());
-            System.out.println("Ввести первую цифру: ");
-            String a = reader.readLine();
-
-            System.out.println("Ввести действие (+, - , * , /): ");
-            String act = reader.readLine();
-
-            System.out.println("Ввести вторую цифру: ");
-            String b = reader.readLine();
-
+            System.out.println("Ввести выражение (arab. or roman:)");
+            String[] expr = (reader.readLine()).split("\\s");
             Calculator calculator = new Calculator();
-            if (chooseVar == 1) {
-                Integer result = calculator.calculation(Integer.parseInt(a), Integer.parseInt(b), act);
-                System.out.println(result);
-            } else if (chooseVar == 2) {
-                Integer result = calculator.calculation(new ArabicRoman(a).toInteger(), new ArabicRoman(b).toInteger(), act);
-                System.out.println(new ArabicRoman(result));
+            if (expr[0].matches("[-+]?\\d+") && expr[2].matches("[-+]?\\d+")) {
+                Integer result = calculator.calculation(Integer.parseInt(expr[0]), Integer.parseInt(expr[2]), expr[1]);
+                System.out.print("Output: " + result);
+            } else {
+                Integer result = calculator.calculation(new ArabicRoman(expr[0]).toInteger(), new ArabicRoman(expr[2]).toInteger(), expr[1]);
+                System.out.println("Output: " + new ArabicRoman(result));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        reader.close();
     }
 
     public Integer calculation(Integer a, Integer b, String op) {
