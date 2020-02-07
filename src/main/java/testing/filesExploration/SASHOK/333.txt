@@ -1,0 +1,13 @@
+/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -javaagent:/home/kajuga/Programms/idea-IU-191.7141.44/lib/idea_rt.jar=42713:/home/kajuga/Programms/idea-IU-191.7141.44/bin -Dfile.encoding=UTF-8 -classpath /home/kajuga/projects/sandbox/target/classes:/home/kajuga/projects/sandbox/lib/javax.jms.jar:/home/kajuga/projects/sandbox/lib/javax.ejb.jar:/home/kajuga/projects/sandbox/lib/javax.persistence.jar:/home/kajuga/projects/sandbox/lib/javax.annotation.jar:/home/kajuga/projects/sandbox/lib/javax.transaction.jar:/home/kajuga/projects/sandbox/lib/javax.resource.jar:/home/kajuga/projects/sandbox/lib/javax.servlet.jar:/home/kajuga/projects/sandbox/lib/javax.servlet.jsp.jar:/home/kajuga/projects/sandbox/lib/javax.servlet.jsp.jstl.jar:/home/kajuga/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar:/home/kajuga/.m2/repository/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar testing.filesExploration.Test
+Exception in thread "main" java.nio.file.NoSuchFileException: /home/kajuga/projects/sandbox/src/main/java/testing/filesExploration/SASHOK/134.txt
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:178)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:292)
+	at java.base/java.nio.channels.FileChannel.open(FileChannel.java:345)
+	at java.base/java.nio.file.Files.lines(Files.java:4033)
+	at java.base/java.nio.file.Files.lines(Files.java:4125)
+	at testing.filesExploration.Test.666main(Test.java:24)
+
+Process finished with exit code 1
