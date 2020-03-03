@@ -15,8 +15,8 @@ class StackAndHeapMemory
 
     public static void main(String[] args)
     {
-        System.out.println("Main Method Started");
+        System.out.println("Server Method Started");
         methodOne();
-        System.out.println("Main Method Ended");
+        System.out.println("Server Method Ended");
     }
 }

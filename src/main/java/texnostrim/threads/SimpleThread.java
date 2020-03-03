@@ -20,10 +20,10 @@ public class SimpleThread {
         t1.start();
 
         for (int i = 0; i < 5; i++) {
-            System.out.println("Main:" + i);
+            System.out.println("Server:" + i);
             TimeUnit.SECONDS.sleep(2);
         }
-        System.out.println("Main thread finished");
+        System.out.println("Server thread finished");
     }
 
 

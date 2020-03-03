@@ -70,7 +70,7 @@ package testing.hashCode;
 
 /*
 
-public class Main {
+public class Server {
 	public static void main(String[] args) {
 		Object object = new Object();
 		int hCode;
