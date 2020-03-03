@@ -9,9 +9,9 @@ public class ClientMain {
     public static final String UNIQUE_BINDING_NAME = "server.calculator";
 
     public static void main(String[] args) throws RemoteException, NotBoundException {
-        final Registry registry = LocateRegistry.createRegistry(2999);
+        final Registry registry = LocateRegistry.getRegistry("localhost", 2999);
         Calculator calculator = (Calculator) registry.lookup(UNIQUE_BINDING_NAME);
-        int multiplyResult = calculator.multiply(20, 30);
+        int multiplyResult = calculator.multiply(20, 33);
         System.out.println(multiplyResult);
     }
 }
